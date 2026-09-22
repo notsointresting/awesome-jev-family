@@ -1,0 +1,18 @@
+# Related Practices & Discussions
+
+Credible public signals — threads, write-ups, and analyses — that describe the Jev-like model space: how the architecture was inferred, why replicas keep appearing, and where the open models stand. Discussions belong here even when no standalone model or tool exists yet.
+
+- [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked) - Technical analysis: inferred the internals from roughly 10,000 API calls, concluding the model keeps LLM knowledge but removes token generation entirely — the write-up several replicas cite as their design basis.
+- [It is the inference technique, not the training](https://x.com/anderslie/status/2100388704644919662) - X: argues the speed comes from parallel decoding rather than model training, and that an inference engine can expose a System One-like API over any open-weight model.
+- [MLP on Qwen 4B mimicking Jev](https://x.com/justALEXWORTEGA/status/2100341039986798930) - X: builder reports that a small MLP trained on top of Qwen 4B already reproduces the decision behaviour.
+- [Running a local Typesafe Jev](https://x.com/wmoto_ai/status/2100454049359577516) - X (Japanese): attempt at running a decision model locally, with speed noted as still improvable.
+- [Jev is just a classifier, and that is fine](https://x.com/bojie_li/status/2100688989006475580) - X (Chinese): a technical counterpoint arguing the model is a representation model rather than something new, and that its latency follows mechanically from one prefill plus a single parallel token per question with logprobs.
+- [Arbitrary classification as a type-safe primitive](https://x.com/cocktailpeanut/status/2100277062309179521) - X: argues the real novelty is not classification but that the model makes arbitrary classification a runtime-defined, type-safe programmable primitive.
+- [I reviewed 287 open-source Jev projects](https://reddit.com/r/LLMDevs/comments/1wko2e5/i_reviewed_287_opensource_jev_projects_here_are/) - Reddit: a reviewer works through 287 repositories and narrows them to 20 that actually explain the model, a useful counterweight to star-count browsing.
+- [Introducing CUA-S1](https://x.com/trycua/status/2101014004927729737) - X: Cua open-sources a family of small, specialised System One models for computer use, starting with form filling and asking what the next specialist should learn.
+- [One 50 ms pass versus 23 turns](https://x.com/be_arsh/status/2101026864341164110) - X: the sharpest framing of the specialist case — a 706K-parameter model fills a whole form in one 50 ms pass, while an LLM agent needs 23 turns and 39.6 seconds for the same form.
+- [Ask HN: What do you think of Noul, a new decision primitive](https://news.ycombinator.com/item?id=49760225) - Hacker News: a proposal to treat `Noul` — the probability-of-true answer type — as a general software primitive rather than tied to one model.
+- [TypeSafe AI's Jev Is Not an LLM - and That May Be the Point](https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/) - News analysis: treats the model's refusal to generate text as the feature rather than a limitation.
+- [WTF is Jev, ELI5](https://x.com/mvanhorn/status/2100761338918363550) - X: frames the shape as "AI multiple choice, not AI essay writing," one of the clearer plain-language explanations.
+- [A deep dive into Jev](https://flaviocopes.com/jev/) - Blog: a veteran technical writer's walkthrough of the System One idea, useful as the explanation to hand someone who has only seen LLM marketing.
+- [Awesome TypeSafe Jev](https://github.com/AbdelStark/awesome-typesafe-jev) - Curated list: a source-backed field guide with SDKs and live demos, one of the larger community indexes.

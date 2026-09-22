@@ -1,0 +1,11 @@
+# Ports & Local Runtimes
+
+Runtimes that serve an existing decision checkpoint locally — native ports to a new backend (MLX, GliFormer, Torch/vLLM/llama.cpp), or self-hosted System One-compatible servers. Unlike the alternatives category, these do not introduce a new model; they run existing weights on new hardware or behind a compatible API.
+
+- [laya-mlx](https://github.com/mizorewww/laya-mlx) - Local runtime: independent MLX port of the Laya checkpoints that runs typed decisions natively on Apple Silicon — 13.4 ms median end-to-end per short English decision, 7.4 ms with the multilingual checkpoint, and zero output tokens, with no PyTorch, Transformers runtime, or cloud API; ships pre-converted FP16 checkpoints and reports 63/63 selected-answer parity with upstream in both FP32 and FP16.
+- [jev-local](https://github.com/us/jev-local) - Local reproduction: `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open weights, verified as an official-SDK drop-in with temperature-fit calibration.
+- [LitJev](https://github.com/zhengxuyu/litjev) - Local reproduction: turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choice, Score, Noul) with no training and no generated answer text.
+- [FastJev](https://github.com/chengyongru/fastjev) - Local runtime: self-hosted Python SDK and System One-compatible API for runtime-defined `Choice`, `Boolean`, and `Score` decisions on pinned open models across Torch, vLLM, MLX, llama.cpp, and WebGPU, with committed row-level benchmarks and checksums.
+- [jeff](https://github.com/logan-markewich/jeff) - Self-hosted runtime: self-hosted drop-in replacement powered by GliFormer, exposing native Choice, Score, and Noul decision endpoints without cloud API dependencies.
+- [Jev-compatible public API](https://x.com/ekzhang1/status/2100651678110515383) - Open research: a public System One-shaped API backed by an open Qwen3.6-35B-A3B model so anyone can try the typed-decision interface.
+- [jevlike-esp32](https://github.com/david-cermak/jevlike-esp32) - Edge deployment: exports a jevlike scorer as ESP32 firmware with a C scorer and a host-side check, putting one-pass decisions on a microcontroller.
