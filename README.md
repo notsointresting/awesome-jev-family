@@ -48,9 +48,9 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 <!-- BEGIN:COVERAGE -->
-**78 entries across 5 categories.**
+**79 entries across 5 categories.**
 
-- [Open Alternatives & Replicas](#open-alternatives-replicas) — 21 entries
+- [Open Alternatives & Replicas](#open-alternatives-replicas) — 22 entries
 - [Ports & Local Runtimes](#ports-local-runtimes) — 7 entries
 - [SDKs & Integrations](#sdks-integrations) — 23 entries
 - [Benchmarks & Calibration](#benchmarks-calibration) — 14 entries
@@ -87,6 +87,7 @@ Source file: [`categories/open-alternatives-replicas.md`](categories/open-altern
 - [Parallel Constrained Decoding (Qwen2.5-1B-RLCD)](https://huggingface.co/spaces/drinkmoonshine/parallel-constrained-decoding) - Open research: RLCD-trained Qwen2.5-1B demo exploring open-source parallel constrained decoding as an alternative.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - Vision decisions: open 0.8B vision-language model that reads one 448 px game frame and returns a probability over the moves the game lists in a single forward pass with no generated text, across ten browser games.
 - [Visual-JEV](https://github.com/jiangxiluning/Visual-Jev) - Multimodal replica: a native multimodal System One model based on Qwen3.5-4B that supports direct image input without requiring modality conversion.
+- [Verdict](https://github.com/Manavarya09/verdict) - Open alternative: Apache-2.0 118M multilingual bi-encoder (multilingual-e5-small fine-tuned on a typed-decision mix) that answers `choice` / `score` / `noul` on the same `POST /v1/systemone` wire format, calibrated with temperature scaling plus a split conformal abstain set with a coverage guarantee (ECE 0.01 to 0.03 on the public suites), runs on CPU or in the browser via ONNX, fits on your own labels in seconds, and its README says it loses to Laya on typed decisions (0.71 vs 0.77).
 
 ### Ports & Local Runtimes
 
