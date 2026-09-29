@@ -2,6 +2,7 @@
 
 Credible public signals — threads, write-ups, and analyses — that describe the Jev-like model space: how the architecture was inferred, why replicas keep appearing, and where the open models stand. Discussions belong here even when no standalone model or tool exists yet.
 
+- [Jev in the Wild](https://arxiv.org/abs/2609.30216) - Ecosystem analysis: surveys 2,170 public GitHub Jev projects to document early growth, application domains, and decision-use patterns.
 - [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked) - Technical analysis: inferred the internals from roughly 10,000 API calls, concluding the model keeps LLM knowledge but removes token generation entirely — the write-up several replicas cite as their design basis.
 - [It is the inference technique, not the training](https://x.com/anderslie/status/2100388704644919662) - X: argues the speed comes from parallel decoding rather than model training, and that an inference engine can expose a System One-like API over any open-weight model.
 - [MLP on Qwen 4B mimicking Jev](https://x.com/justALEXWORTEGA/status/2100341039986798930) - X: builder reports that a small MLP trained on top of Qwen 4B already reproduces the decision behaviour.

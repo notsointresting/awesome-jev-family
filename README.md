@@ -48,13 +48,13 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 <!-- BEGIN:COVERAGE -->
-**78 entries across 5 categories.**
+**79 entries across 5 categories.**
 
 - [Open Alternatives & Replicas](#open-alternatives-replicas) — 21 entries
 - [Ports & Local Runtimes](#ports-local-runtimes) — 7 entries
 - [SDKs & Integrations](#sdks-integrations) — 23 entries
 - [Benchmarks & Calibration](#benchmarks-calibration) — 14 entries
-- [Related Practices & Discussions](#related-practices-discussions) — 13 entries
+- [Related Practices & Discussions](#related-practices-discussions) — 14 entries
 <!-- END:COVERAGE -->
 
 Each entry lives in exactly one category, chosen by what the project *is* (a model, a runtime, an SDK, or a study) rather than what it can do.
@@ -151,6 +151,7 @@ Source file: [`categories/benchmarks-calibration.md`](categories/benchmarks-cali
 
 Source file: [`categories/related-discussions.md`](categories/related-discussions.md)
 
+- [Jev in the Wild](https://arxiv.org/abs/2609.30216) - Ecosystem analysis: surveys 2,170 public GitHub Jev projects to document early growth, application domains, and decision-use patterns.
 - [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked) - Technical analysis: inferred the internals from roughly 10,000 API calls, concluding the model keeps LLM knowledge but removes token generation entirely — the write-up several replicas cite as their design basis.
 - [It is the inference technique, not the training](https://x.com/anderslie/status/2100388704644919662) - X: argues the speed comes from parallel decoding rather than model training, and that an inference engine can expose a System One-like API over any open-weight model.
 - [MLP on Qwen 4B mimicking Jev](https://x.com/justALEXWORTEGA/status/2100341039986798930) - X: builder reports that a small MLP trained on top of Qwen 4B already reproduces the decision behaviour.
